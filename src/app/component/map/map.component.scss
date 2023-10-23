@@ -1,0 +1,20 @@
+.map__container{
+    width: 100%;
+    padding-bottom: 2em;
+    position: relative;
+
+  .country-path{
+        background-color: green;
+    }
+    
+    .indication{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform : translate(-50%, -50%);
+
+    }
+
+  
+}
+

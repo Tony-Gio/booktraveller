@@ -1,0 +1,22 @@
+<div *ngIf="isActive" class="indication__container">
+    <div class="indication__container-country">
+        {{country}}
+        <i class="fa-solid fa-xmark" (click)="close()"></i>
+    </div>
+
+    <!-- Case there's no book related to the country in the database-->
+    <div *ngIf="books.length===0" class="indication__container_books nodisplay">
+        <img src="../../assets/nobookfound.png">
+        <h1>Sorry,</h1>
+        <p>There aren't any book about this country for the moment :</p>
+        <p><a href="signup">Sign up </a> and help us improve this site !</p>
+
+    </div>
+
+    <!-- Case there're  books related to the country in the database-->
+    <div *ngIf="books.length!=0" class="indication__container_books display">
+        <p>There're {{books.length}} book(s) about this country :</p>
+
+        <app-book *ngFor="let book of books" [book]=book>1  </app-book>
+
+</div>

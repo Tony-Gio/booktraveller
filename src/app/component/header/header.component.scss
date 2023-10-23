@@ -1,0 +1,35 @@
+.header__content {
+    width: 100%;
+    padding-inline: 2em;
+    padding-block: 1em;
+    background-color: #20ff65;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__content-logo {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+
+    .header__content-search {
+        input {
+            width: 25em;
+            padding: 1em 1.5em;
+            margin-right: 2em;
+            border: none;
+            border-bottom: 1px solid black;
+            background-color: #92fdb4;
+        }
+
+    }
+
+    i{
+        font-size: 1.5em;
+        &:hover{
+            color:#fff;
+            cursor: pointer;
+            transition: all 200ms;
+        }
+    }
+}

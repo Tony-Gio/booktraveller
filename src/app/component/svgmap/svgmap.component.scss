@@ -1,0 +1,35 @@
+.st1:hover,
+.st2:hover,
+.st3:hover,
+.st4:hover,
+.st5:hover,
+.st6:hover,
+.st7:hover,
+.st8:hover,
+.st9:hover,
+.st10:hover
+{
+fill: #20ff65;
+cursor: pointer;
+}
+
+.st1:active,
+.st2:active,
+.st3:active,
+.st4:active,
+.st5:active,
+.st6:active,
+.st7:active,
+.st8:active,
+.st9:active,
+.st10:active
+{
+fill: black;
+stroke: #20ff65;
+cursor: pointer;
+}
+
+.active-path {
+    fill: #ff7975;
+    cursor: pointer;
+  }
