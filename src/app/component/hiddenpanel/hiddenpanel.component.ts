@@ -1,16 +1,17 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Book } from 'src/app/model/Book';
 import { BookdbService } from 'src/app/service/bookdb.service';
 
 @Component({
-  selector: 'app-map',
-  templateUrl: './map.component.html',
-  styleUrls: ['./map.component.scss']
+  selector: 'app-hiddenpanel',
+  templateUrl: './hiddenpanel.component.html',
+  styleUrls: ['./hiddenpanel.component.scss']
 })
-export class MapComponent {
+export class HiddenpanelComponent {
   country !: string;
   books : Book[] = [];
   isVisible: Boolean = false;
+  index : number=0;
 
 
   constructor(private bookdbService : BookdbService){}
@@ -28,19 +29,26 @@ export class MapComponent {
     })
   }
 
+
   close(){
     console.log('On ferme')
     this.isVisible=false;
-    this.books=[];
   }
 
-
-  @HostListener('document:keydown.escape', ['$event'])
-  onKeyPress(event: KeyboardEvent) {
-    console.log('Touche pressée : ', event.key);
-
-    if (event.key === 'Escape') {
-      this.close();
+  next(){
+    if (this.index<this.books.length-1){
+          this.index++;
+    }else{
+      this.index=0;
     }
-}
+  }
+
+  previous(){
+    if (this.index>0)
+    {
+    this.index--;
+    }else{
+      this.index=this.books.length-1;
+    }
+  }
 }

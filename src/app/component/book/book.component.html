@@ -1,6 +1,6 @@
 <div class="book__container">
     <div class="book__container-title"><p>{{book.title}}</p></div>
-    <div class="book__container-author"><p>{{book.author}} ({{book.date | date :'yyyy'}})</p></div>
+    <div class="book__container-author"><p>{{book.author}} ({{book.date}})</p></div>
     <div class="book__container-info">
         <div class="book__container-imgurl">
             <img src="{{book.imgurl}}">
@@ -10,11 +10,6 @@
         </div>
 
     </div>
-    <div class="book__container-countries">
-        <p> Countries visited :
-            <ul>
-                <li *ngFor="let country of book.countries">{{ country }}</li>
-              </ul>
-     </div>
+
 
 </div>

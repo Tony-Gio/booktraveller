@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { MapComponent } from './component/map/map.component';
 import { IndicationComponent } from './component/indication/indication.component';
 import { SvgmapComponent } from './component/svgmap/svgmap.component';
 import { BookComponent } from './component/book/book.component';
+import { HiddenpanelComponent } from './component/hiddenpanel/hiddenpanel.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { BookComponent } from './component/book/book.component';
     MapComponent,
     IndicationComponent,
     SvgmapComponent,
-    BookComponent
+    BookComponent,
+    HiddenpanelComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

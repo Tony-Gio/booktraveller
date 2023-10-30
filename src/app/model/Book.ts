@@ -3,7 +3,7 @@ export class Book {
     "title": string;
     "author": string;
     "countries": string[];
-    "date": Date;
+    "date": number;
     "imgurl": string;
     "description": string;
     }

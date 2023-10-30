@@ -1,6 +1,19 @@
 <div class="map__container">
+
+    <!--Affichage de la map en SVG-->
     <app-svgmap></app-svgmap>
-    <div class="indication">
-        <app-indication></app-indication>
+
+    <!-- Affichage du panneau latéral si click sur pays-->
+    <div class="hiddenpanel" [ngClass]="{'visible':isVisible}">
+
+        <div class="panelarrow">
+            <p (click)="close()">Close</p>
+            <!-- Pour fermer ffenêtre avec esc-->
+            <div (keydown)="onKeyPress($event)"></div>
+
+        </div>
+        
+        <app-hiddenpanel></app-hiddenpanel>
     </div>
+
 </div>

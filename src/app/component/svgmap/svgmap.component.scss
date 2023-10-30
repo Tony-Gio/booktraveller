@@ -9,7 +9,7 @@
 .st9:hover,
 .st10:hover
 {
-fill: #20ff65;
+fill: #92fdb4;
 cursor: pointer;
 }
 
@@ -24,12 +24,13 @@ cursor: pointer;
 .st9:active,
 .st10:active
 {
-fill: black;
-stroke: #20ff65;
+  fill: #20ff65;
 cursor: pointer;
 }
 
 .active-path {
-    fill: #ff7975;
+  fill: rgb(0, 77, 29);
+stroke: #33af5a;
+
     cursor: pointer;
   }

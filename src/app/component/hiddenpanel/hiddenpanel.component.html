@@ -1,0 +1,28 @@
+<div class="hiddenpanel__container">
+
+    <!-- Cas où il y a des livres correspondant au pays-->
+    <div *ngIf="books.length>0">
+        Here are {{books.length}} books whose action takes place in {{country}} :
+        <div class="book__carousel">
+            <div class="book__carousel-previous" (click)="previous()"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="book__carousel-book-container"><app-book [book]=books[index]></app-book></div>
+            <div class="book__carousel-next" (click)="next()"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+
+        <!-- Cas où il n'y a pas encore de livre correspondant au pays-->
+    <div *ngIf="books.length===0" class="notfound">
+        <div class="notfound-img">
+                    <img src="../../assets/nobookfound.png" class="noressource">
+
+        </div>
+        <div class="notfound-txt">
+        <h1>Sorry,</h1>
+        <p>There aren't any book about <span>{{country}}</span> for the moment :</p>
+        <p><a href="signup">Sign up </a> and help us improve this site !</p>
+        </div>
+    </div>
+
+
+
+</div>
